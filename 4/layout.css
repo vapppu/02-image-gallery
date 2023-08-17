@@ -1,0 +1,75 @@
+:root {
+  --padding: 2rem;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+body {
+  font-size: 1.6rem;
+  padding: var(--padding);
+  max-width: fit-content;
+  margin: 0 auto;
+  height: 100%;
+}
+ul,
+figure {
+  margin-block-end: var(--padding);
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+h1 {
+  background-color: white;
+  color: lightgrey;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 1rem;
+  text-transform: lowercase;
+  margin-block-end: var(--padding);
+}
+ul {
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.4rem;
+}
+main {
+  background-color: lightgrey;
+  padding: var(--padding);
+  max-width: fit-content;
+  height: 100%;
+}
+figure {
+  width: 420px;
+  background-color: white;
+  padding: var(--padding);
+}
+img {
+  max-width: 100%;
+  background-image: url("images/placeholder.png");
+}
+
+/* FLEX */
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+ul > * {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 426px) {
+  ul > * {
+    flex-basis: 0;
+  }
+  li {
+    padding-inline-end: 3rem;
+    min-width: fit-content;
+  }
+}
